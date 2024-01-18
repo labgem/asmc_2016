@@ -1,0 +1,21 @@
+Dependencies are in asmc_2016/src/
+
+run_modeller.sh
+===============
+- modpy.sh  : configuration file (libraries, paths, environments)
+- model.py  : modeling core script
+
+run_asmc.sh
+=========== 
+- alignAllCommPoc.pl            : align all 3D models (previously aligned on reference structure) and get corresponding pockets (align.fasta) based on residues reported in list_aa_pocket.dat.
+- choose_template.py            : select a structure as template: prioritize holo-structures (with a ligand) rather than apo-structures (without ligand) even if the latter display better resolution.
+- conserv.py                    : write maximal conservation for each position in conservation.dat.
+- conserv_pos.py                : return “TRUE” if two residues (or more) are simultaneously present at a given position with a conservation >= 20 %.
+- fit_model.py                  : fit reference structure on all structures (included in templates.txt) and save coordinates into 1REF_fit.pdb then renamed 1REF.pdb.
+- geraArffFromMultiprot.pl      : get all pocket sequences from align.fasta, separate each residue by a comma (e.g. SCEGMEFWVYNYLHPSYQGTT becomes S,C,E,G,M,E,F,W,V,Y,N,Y,L,H,P,S,Y,Q,G,T,T) and generate the output msa_pocket.arff.
+- getWekaClusters.pl            : get all clusters defined by WEKA software into the output Weka_clusters.
+- graph.R                       : calculate p-value (*.pvalue), generate a graph (graph_*.png) and define specificity-determining positions for each cluster (sdps.dat).
+- loglikelihood.pl              : log-likelihood analysis, comparison with evolutionary random model and calculation of Z-score (*.zscore). 
+- make-asmc-tree.R              : generate an image of ASMC tree (asmc-tree.png) which represents only clusters ≥ X members and their corresponding sequence logo (X = 15,10 or 5 if family >1000, <1000 or <500 proteins, respectively).
+- maxEntropie.pl                : calculate the maximum entropy from cluster_after_fusion.fasta in order to set Y axis maximum in sequence logos (weblogo software).
+- merge_clusters_on_maxGain.pl  : analyze WEKA Cobweb outputs (tree and clusters composition) such that nodes are considered to be split only when at least gain on one MSA position is higher than gain of the upper levels.
