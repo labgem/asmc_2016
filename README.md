@@ -1,7 +1,7 @@
-<!-- ![ASMC logo](ASMC-logo.png) -->
+<!-- ![ASMC logo](docs/ASMC-logo.png) -->
 <!-- center and resize the image with html syntax -->
 <p align="center">
-  <img src="ASMC-logo.png" alt="ASMC-logo"
+  <img src="docs/ASMC-logo.png" alt="ASMC-logo"
      width="300" 
      height="200" />
 </p>
@@ -12,10 +12,10 @@ ASMC code from de Melo-Minardi et al. (2010) [doi: 10.1093/bioinformatics/btq595
 
 ASMC is an unsupervised method to classify sequences using structural information of homologous protein pockets. The different steps are described hereafter.
 
-<!-- ![ASMC workflow](ASMC-workflow.png) -->
+<!-- ![ASMC workflow](docs/ASMC-workflow.png) -->
 <!-- center and resize the image with html syntax -->
 <p align="center">
-  <img src="ASMC-workflow.png" alt="ASMC-workflow" 
+  <img src="docs/ASMC-workflow.png" alt="ASMC-workflow" 
      width="400" 
      height="600" />
 </p>
