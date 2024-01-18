@@ -8,7 +8,7 @@
 
 # ASMC: Active Site Modeling and Clustering
 
-ASMC code from de Melo-Minardi et al. (2010) [doi: 10.1093/bioinformatics/btq595], updated in 2016.
+ASMC code from de Melo-Minardi et al. (2010) (see section References), updated in 2016.
 
 ASMC is an unsupervised method to classify sequences using structural information of homologous protein pockets. The different steps are described hereafter.
 
